@@ -1,0 +1,25 @@
+
+.f3,.f2{
+    display: inline-block;
+    
+}
+.f2{
+    float: left;
+
+}
+.f3{
+    width: 25%;
+    height: 400px;
+    background-color: hwb(0 96% 4%);
+
+    margin-left: 100px;
+}
+input,label{
+    width: 60%;
+    height: 25px;
+    margin-right: 70px;
+    font-size: 15px;
+}
+img{
+    margin-left: 60px;
+}
