@@ -46,16 +46,29 @@ function Darshbordd() {
                 <th>Remain</th>
                 <th>Profit</th>
                 </tr>
-                {/* <tr>
+                <tr>
                 <td>Sharifa</td>
                 <td>Khelef</td>
                 <td>1</td>
+                <td>1</td>
+                <td>2</td>
                 </tr>
                 <tr>
                 <td>Rukia</td>
                 <td>Abuu</td>
                 <td>2</td>
-                </tr> */}
+                <td>1</td>
+                <td>2</td>
+                
+                </tr>
+                <tr>
+                <td>Rukia</td>
+                <td>Abuu</td>
+                <td>2</td>
+                <td>1</td>
+                <td>2</td>
+                
+                </tr>
 
             </table>
         </div><br/><br/><br/><br/><br/><br/>

@@ -29,3 +29,7 @@ li a {
     text-decoration: white;
     /* margin-left:100px ; */
 }
+
+li a hover {
+        color: black;
+}

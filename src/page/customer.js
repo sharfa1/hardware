@@ -1,9 +1,38 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import './customer.css'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import Dashbord from '../component/dashbord'
-
+import axios from 'axios';
+import '../../node_modules/font-awesome/css/font-awesome.min.css'
  function Customer() {
+
+
+    const [customers, setCustomers] = useState([]);
+    const Navigate = useNavigate();
+
+    useEffect(()=>{
+        loadCustomers();
+    },[]);
+    const loadCustomers = async () =>{
+        try{
+            const respo = await axios.get("http://localhost:8080/customer/List");
+            setCustomers(respo.data);
+            
+        }catch(error){
+            console.log(error);
+        }
+    };
+    const deletehandlesubmit = (custID) =>{
+        const popMsg =window.confirm('Are you sure you want to delete this?');
+        if (popMsg){
+            
+           axios.delete(`http://localhost:8080/customer/delete/${custID}`)
+            .then((res)=>{
+                Navigate('/customer');
+                window.location.reload();
+            })
+        }
+    }
   return (
 
 
@@ -34,33 +63,46 @@ import Dashbord from '../component/dashbord'
         <div className="card">
             <div className="card-body">
             <h3  className="card-title">List of customers</h3>
-            <p className="card-text">Dashbord</p>
+            
             
             </div>
             <table>
                 <tr>
-                <th>custID</th>
+                <th>S/N</th>
                 <th>CustFname</th>
                 <th>custLname</th>
-                <th>custPhone </th>
                 <th>custAdress</th>
+                <th>custPhone </th>
+                <th>Action</th>
                 
                 </tr>
-                <tr>
-                <td>1</td>
-                <td>Sharifa</td>
-                <td>Khelef</td>
-                <td>07489494949</td>
-                <td>Amani</td>
-                </tr>
-                <tr>
-                <td>2</td>
-                <td>Rukia</td>
-                <td>Abuu</td>
+              
+                    {
+                        customers.length >0 ?(
+                            customers.map((Custom, index) =>(
+
+
+                                <tr key={index} >
+                <td>{index + 1}</td>
+                <td>{Custom.custFname}</td>
+                <td>{Custom.custLname}</td>
+                <td>{Custom.custAdress}</td>
+                <td>{Custom.custPhone}</td>
                 
-                <td>07489494949</td>
-                <td>Amani</td>
+                <td><button onClick={()=> deletehandlesubmit(Custom.custID)} className='btn btn-info DELETE'><i className='fa fa-trash'></i> </button>
+                <Link to={`/update/${Custom.custID}`}><button className='btn' style={{marginLeft:'1rem'}}> <i className='fa fa-pencil'></i></button></Link>
+                </td>
                 </tr>
+
+                            ))
+                        ):(
+                            <tr>
+                                <td colSpan='4'>no cust</td>
+                            </tr>
+                        )
+                    }
+
+           
                 
 
             </table>

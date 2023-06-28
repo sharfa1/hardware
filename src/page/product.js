@@ -41,18 +41,25 @@ function Product() {
                     <th>prodName</th>
                     <th>prodQuantity</th>
                     <th>prodUnitprice</th>
+                    <th>Action</th>
                     </tr>
                     <tr>
                     <td>2</td> 
                     <td>Sharifa</td>
                     <td>Khelef</td>
                     <td>1</td>
+                    <td><button className='btn btn-info DELETE'><i className='fa fa-trash'></i> </button>
+                <button className='btn' style={{marginLeft:'1rem'}}> <i className='fa fa-pencil'></i></button>
+                </td>
                     </tr>
                     <tr>
                     <td>2</td> 
                     <td>Rukia</td>
                     <td>Abuu</td>
                     <td>2</td>
+                    <td><button className='btn btn-info DELETE'><i className='fa fa-trash'></i> </button>
+                <button className='btn' style={{marginLeft:'1rem'}}> <i className='fa fa-pencil'></i></button>
+                </td>
                     </tr>
     
                 </table>

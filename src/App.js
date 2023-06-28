@@ -13,6 +13,7 @@ import Report from './page/report';
 import Form from './page/form';
 import Proform from './page/proform';
 import Home from './page/home';
+import Update from './page/update';
 
 function App() {
   return (
@@ -35,9 +36,8 @@ function App() {
       <Route exact path='/product' element={<Product/>}/>
       <Route path='/proform' element={<Proform/>}/>
       <Route exact path='/sales' element={<Sales/>}/>
-      
-    
-       <Route path='/report' element={<Report/>}/> 
+      <Route path='/report' element={<Report/>}/> 
+       <Route path='/update/:custID' element={<Update/>}/> 
        {/* <Route exact path='/' element={<Darshbordd/>}/> */}
 
        

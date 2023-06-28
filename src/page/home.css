@@ -10,7 +10,7 @@
 .f3{
     width: 25%;
     height: 400px;
-    background-color: hwb(0 96% 4%);
+    background-color: white;
 
     margin-left: 100px;
 }
@@ -22,4 +22,11 @@ input,label{
 }
 img{
     margin-left: 60px;
+}
+h2{
+    font-family: 'Times New Roman', Times, serif;
+}
+.logp{
+    height: 650px;
+    background-color: #ecf0f4;
 }

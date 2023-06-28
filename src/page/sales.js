@@ -51,6 +51,29 @@ function Sales() {
                 <td>Abuu</td>
                 <td>2</td>
                 </tr> */}
+                <tr>
+                <td>Sharifa</td>
+                <td>Khelef</td>
+                <td>1</td>
+                <td>1</td>
+                <td>2</td>
+                </tr>
+                <tr>
+                <td>Rukia</td>
+                <td>Abuu</td>
+                <td>2</td>
+                <td>1</td>
+                <td>2</td>
+                
+                </tr>
+                <tr>
+                <td>Rukia</td>
+                <td>Abuu</td>
+                <td>2</td>
+                <td>1</td>
+                <td>2</td>
+                
+                </tr>
 
             </table>
             </div><br/><br/><br/><br/><br/><br/>
